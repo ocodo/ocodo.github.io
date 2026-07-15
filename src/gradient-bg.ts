@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let tgY = 0;
 
     function move() {
-        curX += (tgX - curX) / 30;
-        curY += (tgY - curY) / 40;
+        curX += (tgX - curX) / 50;
+        curY += (tgY - curY) / 50;
         interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
         requestAnimationFrame(() => {
             move();
