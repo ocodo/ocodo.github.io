@@ -1,45 +1,18 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
     <title>ocodo</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body
-    class="relative overflow-hidden"
-    style="scroll-behavior: smooth"
-    >
-    <div class="gradient-bg">
-      <svg xmlns="http://www.w3.org/2000/svg" id="goo-svg">
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="blur" />
-            <feColorMatrix in="blur"
-                           mode="matrix"
-                           values="
-				   1    0    0    0    0
-				   0    1    0    0    0
-				   0    0    1    0    0
-                                   0    0    0    12  -8
-				   "
-                           result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </defs>
-      </svg>
-      <div class="gradients-container">
-        <div class="g1"></div>
-        <div class="g2"></div>
-        <div class="g3"></div>
-        <div class="g4"></div>
-        <div class="g5"></div>
-        <div class="interactive"></div>
-      </div>
-    </div>
-    <div class="absolute top-0 left-0 w-screen h-screen flex flex-col items-center justify-center bg-transparent">
-      <img src="ocodo.svg">
-    </div>
-    <div class="px-3 p-2 rounded-b text-white bg-black/20 backrop-blur-md w-fit top-0 right-10 fixed font-serif">
-    </div>
-    <script type="module" src="src/gradient-bg.ts"></script>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
