@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@ocodo/ocodo-mono-dotzero-nerd/font";
+
+@theme {
+  --font-sans: "Geist Variable";
+  --font-mono: "OcodoMonoDotZeroNerdFont", monospace;
+}
 
 html,
 body,

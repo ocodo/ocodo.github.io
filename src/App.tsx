@@ -4,6 +4,7 @@ import { AnimatedArc } from '@/components/AnimatedArc';
 import { GradientBackground } from '@/components/GradientBackground';
 import { OcodoFoundryPanel } from '@/components/OcodoFoundryPanel';
 import { AudioPlayer } from '@/components/AudioPlayer';
+import { HelpPanel } from '@/components/HelpPanel';
 
 const BPM = 173;
 
@@ -242,70 +243,8 @@ export default function App() {
         </>
       )}
 
-      {showHelpPanel && (
-        <HelpPanel />
-      )}
+      {showHelpPanel && <HelpPanel />}
     </main>
   );
 }
 
-
-const HelpPanel = () => (
-  <div className="absolute top-0 inset-x-0 flex justify-center">
-    <div
-      className="w-1/2 rounded-lg border bg-white/10 p-5 text-white"
-      style={{
-        borderColor: 'hsl(255 30% 60% / 20%)',
-      }}
-    >
-      <div className="mb-2 text-md text-foreground font-bold">
-        Help Panel
-      </div>
-      <div className='text-sm'>
-
-
-        <div className="grid grid-cols-[4rem_1fr] items-center gap-2">
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            f
-          </div>
-          <div className="text-foreground">Toggle logo fade in / out</div>
-
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            r
-          </div>
-          <div className="text-foreground">Reset with Random number of arcs</div>
-
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            1..9
-          </div>
-          <div className="text-foreground">Reset with number of arcs</div>
-
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            v
-          </div>
-          <div className="text-foreground">Toggle button visibility</div>
-
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            g
-          </div>
-          <div className="text-foreground">Toggle gradient background</div>
-
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            b
-          </div>
-          <div className="text-foreground">Toggle linecaps butt or round</div>
-
-          <div className="text-foreground flex w-8 justify-center rounded-xl bg-foreground/10 p-2 font-mono">
-            t
-          </div>
-          <div className="text-foreground">Toggle theme Dark/Light</div>
-
-          <div className="text-foreground flex w-8 flex-col items-center justify-center rounded-xl bg-foreground/10 p-2 font-mono text-[12px]">
-            <div className="text-foreground">Ctrl+?</div>
-          </div>
-          <div className="text-foreground">Toggle help panel</div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
